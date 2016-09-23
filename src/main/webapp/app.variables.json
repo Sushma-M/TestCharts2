@@ -1,4 +1,20 @@
 {
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -6,6 +22,25 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_page2" : {
+    "_id" : "wm-goToPage_page2-wm.NavigationVariable-1474608610703",
+    "name" : "goToPage_page2",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "page2",
+      "type" : "list"
+    } ],
+    "operation" : "gotoPage",
+    "pageName" : "page2",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "DEPTid",
+      "value" : "bind:Widgets.chart1.selecteditem.deptId"
+    } ],
+    "pageTransitions" : "none"
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
@@ -18,24 +53,5 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
-  },
-  "appNotification": {
-      "_id": "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-      "name": "appNotification",
-      "owner": "App",
-      "category": "wm.NotificationVariable",
-      "dataBinding": [
-        {
-          "target": "class",
-          "value": "Error",
-          "type": "list"
-        },
-        {
-          "target": "toasterPosition",
-          "value": "bottom right",
-          "type": "list"
-        }
-      ],
-      "operation": "toast"
-    }
+  }
 }
